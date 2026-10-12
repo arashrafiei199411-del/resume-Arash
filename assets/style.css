@@ -1,0 +1,306 @@
+/* تنظیمات پایه و فونت */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050b14;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ثابت کردن ویدیو در بک‌گراند صفحه[cite: 1] */
+.video-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* پوشش کامل صفحه توسط ویدیو */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 11, 20, 0.85); /* تیره‌کردن بک‌گراند برای خوانایی محتوا */
+}
+
+/* کانتینر عمومی */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* رنگ‌های هایلایت نئونی */
+.highlight {
+    color: #00f2fe;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* استایل افکت شیشه‌ای مدرن (Glassmorphism) */
+.glass-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+/* هدر و منو */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(5, 11, 20, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-menu a:hover {
+    color: #00f2fe;
+}
+
+/* دکمه‌ها */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #0072ff, #00f2fe);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+    border: none;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #00f2fe;
+}
+
+/* بخش هیرو (معرفی) */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-text .badge {
+    background: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-text p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* استایل عمومی بخش‌ها */
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.section-desc {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 50px;
+}
+
+/* گرید مهارت‌ها */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #00f2fe;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: #00f2fe;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skill-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* گرید پروژه‌ها */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-info p {
+    color: #94a3b8;
+}
+
+/* بخش تماس با من */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00f2fe;
+}
+
+/* فوتر */
+.site-footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(5, 11, 20, 0.9);
+}
+
+/* ریسپانسیو برای موبایل و تبلت */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* قابلیت توسعه برای منوی همبرگری در آینده */
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+}
